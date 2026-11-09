@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kinetiq Toons — Apply for WL</title>
+  <meta name="description" content="Apply for the Kinetiq Toons whitelist. Follow, like, repost and submit your wallet.">
+  <link rel="icon" type="image/png" href="assets/kftoons-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Titan+One&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="apply-body">
+
+  <!-- ===== NAV ===== -->
+  <header class="nav nav-dark">
+    <div class="nav-inner">
+      <a class="nav-brand" href="index.html">
+        <img src="assets/nav-logo.png" alt="Kinetiq Toons logomark" class="nav-logo">
+        <span class="nav-wordmark">Kinetiq Toons</span>
+      </a>
+      <a href="index.html" class="btn btn-primary btn-sm nav-cta">Back Home</a>
+    </div>
+  </header>
+
+  <main class="apply">
+    <div class="apply-grid">
+
+      <!-- ===== LEFT: intro + countdown + stepper ===== -->
+      <aside class="apply-side">
+        <p class="apply-eyebrow"><span class="dash"></span> Whitelist / Form KF-5000</p>
+        <h1 class="apply-title">
+          Apply for<br>
+          <span class="apply-title-accent">whitelist</span>
+        </h1>
+
+        <div class="countdown">
+          <p class="countdown-label">WL applications close in</p>
+          <div class="countdown-boxes">
+            <div class="cd-box"><span id="cd-hrs">00</span><small>HRS</small></div>
+            <div class="cd-box"><span id="cd-min">00</span><small>MIN</small></div>
+            <div class="cd-box"><span id="cd-sec">00</span><small>SEC</small></div>
+          </div>
+          <div class="cd-bar"><i id="cd-bar-fill"></i></div>
+        </div>
+
+        <ol class="stepper">
+          <li class="step is-active" data-step="1"><span class="step-num">01</span><span class="step-name">Follow</span></li>
+          <li class="step" data-step="2"><span class="step-num">02</span><span class="step-name">Engage</span></li>
+          <li class="step" data-step="3"><span class="step-num">03</span><span class="step-name">Wallet</span></li>
+          <li class="step" data-step="4"><span class="step-num">04</span><span class="step-name">Confirm</span></li>
+        </ol>
+      </aside>
+
+      <!-- ===== RIGHT: wizard panel ===== -->
+      <section class="apply-panel">
+        <div class="panel-head">
+          <span class="panel-step-label" id="panel-step-label">Step 1 / 4</span>
+          <div class="panel-progress"><i id="panel-progress-fill" style="width: 25%"></i></div>
+        </div>
+
+        <div class="panel-body">
+
+          <!-- STEP 1: FOLLOW -->
+          <div class="panel-step is-active" data-step="1">
+            <h2 class="panel-title">Follow the flock</h2>
+            <p class="panel-text">
+              First things first — follow us on X so you never miss a drop,
+              announcement, or chaos from the nest.
+            </p>
+            <div class="task-list">
+              <button type="button" class="task-btn" data-task data-link="https://x.com/KToonsNFT">
+                <span class="task-check">✓</span>
+                <span class="task-label">𝕏&ensp;Follow @KToonsNFT</span>
+              </button>
+            </div>
+            <div class="panel-actions">
+              <button type="button" class="btn btn-primary btn-lg" data-next disabled>Continue</button>
+            </div>
+          </div>
+
+          <!-- STEP 2: ENGAGE -->
+          <div class="panel-step" data-step="2">
+            <h2 class="panel-title">Like &amp; repost</h2>
+            <p class="panel-text">
+              Show the pinned post some love. Like it, repost it — let the
+              whole timeline know the flock is taking flight.
+            </p>
+            <div class="task-list">
+              <button type="button" class="task-btn" data-task data-link="https://x.com/KToonsNFT/status/2118774772800557160">
+                <span class="task-check">✓</span>
+                <span class="task-label">♥&ensp;Like the pinned post</span>
+              </button>
+              <button type="button" class="task-btn" data-task data-link="https://x.com/KToonsNFT/status/2118774772800557160">
+                <span class="task-check">✓</span>
+                <span class="task-label">↻&ensp;Repost the pinned post</span>
+              </button>
+            </div>
+            <div class="panel-actions">
+              <button type="button" class="btn btn-outline-dark btn-lg" data-back>Back</button>
+              <button type="button" class="btn btn-primary btn-lg" data-next disabled>Continue</button>
+            </div>
+          </div>
+
+          <!-- STEP 3: WALLET -->
+          <div class="panel-step" data-step="3">
+            <h2 class="panel-title">Submit your wallet</h2>
+            <p class="panel-text">
+              Drop your X handle and the EVM wallet address you want your WL
+              spot tied to. Double-check both — this is where the magic lands.
+            </p>
+            <div class="wallet-field">
+              <label class="wallet-label" for="xhandle">X (Twitter) username *</label>
+              <input type="text" id="xhandle" class="wallet-input" placeholder="@yourhandle" autocomplete="off" spellcheck="false">
+            </div>
+            <div class="wallet-field">
+              <label class="wallet-label" for="wallet">EVM wallet address *</label>
+              <input type="text" id="wallet" class="wallet-input" placeholder="0x..." autocomplete="off" spellcheck="false">
+            </div>
+            <p class="wallet-error" id="wallet-error"></p>
+            <div class="panel-actions">
+              <button type="button" class="btn btn-outline-dark btn-lg" data-back>Back</button>
+              <button type="button" class="btn btn-primary btn-lg" data-next>Continue</button>
+            </div>
+          </div>
+
+          <!-- STEP 4: CONFIRM -->
+          <div class="panel-step" data-step="4">
+            <h2 class="panel-title">Confirm &amp; submit</h2>
+            <p class="panel-text">One last look before you join the queue.</p>
+            <ul class="summary-list">
+              <li><span>Follow</span><b id="sum-follow">@KToonsNFT ✓</b></li>
+              <li><span>Engage</span><b>Liked + Reposted ✓</b></li>
+              <li><span>X account</span><b id="sum-x">—</b></li>
+              <li><span>Wallet</span><b class="summary-wallet" id="sum-wallet">—</b></li>
+            </ul>
+            <p class="wallet-error" id="submit-error"></p>
+            <div class="panel-actions">
+              <button type="button" class="btn btn-outline-dark btn-lg" data-back>Back</button>
+              <button type="button" class="btn btn-primary btn-lg" id="submit-btn">Submit Application</button>
+            </div>
+          </div>
+
+          <!-- SUCCESS -->
+          <div class="panel-step panel-success" data-step="5">
+            <img src="assets/nav-logo.png" alt="" class="success-bird float">
+            <h2 class="panel-title">You're in the queue!</h2>
+            <p class="panel-text">
+              Application received. Keep notifications on for @KToonsNFT —
+              WL results will be announced on X. Stay grumpy.
+            </p>
+            <div class="panel-actions">
+              <a href="index.html" class="btn btn-primary btn-lg">Back to the nest</a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script>
+    /* ---- Supabase config (paste your project URL + anon key) ---- */
+    var SUPABASE_URL = 'https://slstblrdenuarrngyssp.supabase.co';
+    var SUPABASE_ANON_KEY = 'sb_publishable_CufGaQZfiIwkHwExj8qCnQ_BZVe_CYu';
+    var sb = window.supabase ? window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY) : null;
+
+    /* ---- countdown (2-day WL window) ---- */
+    var WL_OPEN  = new Date('2026-11-09T17:30:00');
+    var WL_CLOSE = new Date('2026-11-11T17:30:00');
+
+    function pad(n) { return String(n).padStart(2, '0'); }
+    function tick() {
+      var now = new Date();
+      var diff = Math.max(0, WL_CLOSE - now);
+      var hrs = Math.floor(diff / 3.6e6);
+      var min = Math.floor(diff / 6e4) % 60;
+      var sec = Math.floor(diff / 1e3) % 60;
+      document.getElementById('cd-hrs').textContent = pad(hrs);
+      document.getElementById('cd-min').textContent = pad(min);
+      document.getElementById('cd-sec').textContent = pad(sec);
+      var total = WL_CLOSE - WL_OPEN;
+      var left = Math.min(Math.max((now - WL_OPEN) / total, 0), 1);
+      document.getElementById('cd-bar-fill').style.width = (left * 100) + '%';
+    }
+    tick();
+    setInterval(tick, 1000);
+
+    /* ---- wizard ---- */
+    var current = 1;
+    var TOTAL = 4;
+
+    function showStep(n) {
+      current = n;
+      document.querySelectorAll('.panel-step').forEach(function (el) {
+        el.classList.toggle('is-active', +el.dataset.step === n);
+      });
+      document.querySelectorAll('.stepper .step').forEach(function (el) {
+        var s = +el.dataset.step;
+        el.classList.toggle('is-active', s === n);
+        el.classList.toggle('is-done', s < n);
+      });
+      var label = document.getElementById('panel-step-label');
+      var fill = document.getElementById('panel-progress-fill');
+      if (n <= TOTAL) {
+        label.textContent = 'Step ' + n + ' / ' + TOTAL;
+        fill.style.width = (n / TOTAL * 100) + '%';
+      } else {
+        label.textContent = 'Done';
+        fill.style.width = '100%';
+      }
+    }
+
+    function stepTasksDone(stepEl) {
+      var tasks = stepEl.querySelectorAll('[data-task]');
+      if (!tasks.length) return true;
+      return Array.prototype.every.call(tasks, function (t) { return t.classList.contains('done'); });
+    }
+
+    function refreshNext(stepEl) {
+      var next = stepEl.querySelector('[data-next]');
+      if (next && stepEl.querySelector('[data-task]')) {
+        next.disabled = !stepTasksDone(stepEl);
+      }
+    }
+
+    document.querySelectorAll('[data-task]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        this.classList.toggle('done');
+        if (this.dataset.link && this.classList.contains('done')) {
+          window.open(this.dataset.link, '_blank');
+        }
+        refreshNext(this.closest('.panel-step'));
+      });
+    });
+
+    document.querySelectorAll('[data-next]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var stepEl = this.closest('.panel-step');
+        if (stepEl.dataset.step === '3') {
+          var xhandle = document.getElementById('xhandle');
+          var wallet = document.getElementById('wallet');
+          var err = document.getElementById('wallet-error');
+          var xVal = xhandle.value.trim().replace(/^@/, '');
+          var wVal = wallet.value.trim();
+          if (!/^[A-Za-z0-9_]{1,15}$/.test(xVal)) {
+            err.textContent = 'Please enter a valid X username (letters, numbers, underscore).';
+            xhandle.focus();
+            return;
+          }
+          if (!/^0x[a-fA-F0-9]{40}$/.test(wVal)) {
+            err.textContent = 'Please enter a valid EVM address (0x + 40 hex characters).';
+            wallet.focus();
+            return;
+          }
+          err.textContent = '';
+          window._wlX = '@' + xVal;
+          window._wlWallet = wVal;
+          document.getElementById('sum-x').textContent = window._wlX;
+          document.getElementById('sum-wallet').textContent =
+            wVal.slice(0, 6) + '...' + wVal.slice(-4);
+        }
+        showStep(+stepEl.dataset.step + 1);
+      });
+    });
+
+    document.querySelectorAll('[data-back]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        showStep(+this.closest('.panel-step').dataset.step - 1);
+      });
+    });
+
+    document.getElementById('submit-btn').addEventListener('click', async function () {
+      var btn = this;
+      var err = document.getElementById('submit-error');
+
+      if (!sb || SUPABASE_ANON_KEY.indexOf('YOUR_') === 0) {
+        err.textContent = 'Supabase is not configured yet. Add your anon key in apply.html.';
+        return;
+      }
+
+      btn.disabled = true;
+      btn.textContent = 'Submitting...';
+      err.textContent = '';
+
+      try {
+        var res = await sb.from('wl_applications').insert({
+          x_handle: window._wlX,
+          evm_address: window._wlWallet
+        });
+        if (res.error) {
+          if (res.error.code === '23505') {
+            err.textContent = 'This X account or wallet has already applied.';
+          } else {
+            err.textContent = 'Something went wrong. Please try again.';
+          }
+          btn.disabled = false;
+          btn.textContent = 'Submit Application';
+          return;
+        }
+        showStep(5);
+      } catch (e) {
+        err.textContent = 'Network error. Check your connection and try again.';
+        btn.disabled = false;
+        btn.textContent = 'Submit Application';
+      }
+    });
+  </script>
+</body>
+</html>
