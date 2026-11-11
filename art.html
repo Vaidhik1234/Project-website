@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kinetiq Toons — Community Art</title>
+  <meta name="description" content="Art from the flock — every piece made by the Kinetiq Toons community for the art competition.">
+  <link rel="icon" type="image/png" href="assets/kftoons-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Titan+One&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=3">
+</head>
+<body class="apply-body">
+
+  <!-- ===== NAV ===== -->
+  <header class="nav nav-dark">
+    <div class="nav-inner">
+      <a class="nav-brand" href="index.html">
+        <img src="assets/nav-logo.png" alt="Kinetiq Toons logomark" class="nav-logo">
+        <span class="nav-wordmark">Kinetiq Toons</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html#about" class="nav-link">About</a>
+        <a href="index.html#collection" class="nav-link">Collection</a>
+        <a href="index.html#faq" class="nav-link">F.A.Q.</a>
+      </nav>
+      <a href="index.html" class="btn btn-primary btn-sm nav-cta">Back Home</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== HERO ===== -->
+    <section class="art-hero">
+      <p class="apply-eyebrow"><span class="dash"></span> Community / Art Competition</p>
+      <h1 class="apply-title">
+        Art from<br>
+        <span class="apply-title-accent">the flock</span>
+      </h1>
+      <p class="art-hero-sub">
+        We asked the community to make Kinetiq Toons art — and the flock
+        delivered. Every piece below was created and posted on X by the
+        community. Click any piece to open the original post on X. Stay grumpy, stay creative.
+      </p>
+      <span class="art-count" id="art-count">0 entries</span>
+    </section>
+
+    <!-- ===== GALLERY ===== -->
+    <section class="art-grid" id="art-grid"></section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="assets/nav-logo.png" alt="Kinetiq Toons logomark" class="footer-logo">
+        <div>
+          <span class="footer-wordmark">Kinetiq Toons</span>
+          <p class="footer-tagline">The Spirit</p>
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="index.html#about">About</a>
+        <a href="index.html#collection">Collection</a>
+        <a href="index.html#faq">F.A.Q.</a>
+      </div>
+      <p class="footer-note">© 2026 Kinetiq Toons. Stay grumpy.</p>
+    </div>
+  </footer>
+
+  <script>
+    /* ============================================================
+       COMMUNITY ART ENTRIES
+       Har entry: { img: 'assets/community-art/<file>', handle: '<artist X handle>', tweet: '<tweet url>' }
+       ============================================================ */
+    var ART = [
+      { img: 'assets/community-art/diancaksono58-2120145799678169339.jpg', handle: 'diancaksono58', tweet: 'https://x.com/diancaksono58/status/2120145799678169339' },
+      { img: 'assets/community-art/kipverse-2120378270583496857.jpg', handle: 'Kipverse', tweet: 'https://x.com/Kipverse/status/2120378270583496857' },
+      { img: 'assets/community-art/nommicast-2120418142057107657.jpg', handle: 'Nommicast', tweet: 'https://x.com/Nommicast/status/2120418142057107657' },
+      { img: 'assets/community-art/rweb3man-2120443161839579493.jpg', handle: 'RWeb3man', tweet: 'https://x.com/RWeb3man/status/2120443161839579493' },
+      { img: 'assets/community-art/famouzzxe-2120443741198561535.jpg', handle: 'FamouzZXE', tweet: 'https://x.com/FamouzZXE/status/2120443741198561535' },
+      { img: 'assets/community-art/hiudayrly-2120480026428883330.jpg', handle: 'hiudayrly', tweet: 'https://x.com/hiudayrly/status/2120480026428883330' },
+      { img: 'assets/community-art/kipverse-2120482228253732960.jpg', handle: 'Kipverse', tweet: 'https://x.com/Kipverse/status/2120482228253732960' },
+      { img: 'assets/community-art/jr11ican-2120497182495457612.jpg', handle: 'Jr11Ican', tweet: 'https://x.com/Jr11Ican/status/2120497182495457612' },
+      { img: 'assets/community-art/pikpikzu-2120552497064628231.jpg', handle: 'Pikpikzu', tweet: 'https://x.com/Pikpikzu/status/2120552497064628231' },
+      { img: 'assets/community-art/amaloversclub-2120401466120614090.jpg', handle: 'amaloversclub', tweet: 'https://x.com/amaloversclub/status/2120401466120614090' },
+      { img: 'assets/community-art/rweb3man-2120422275610796537.jpg', handle: 'RWeb3man', tweet: 'https://x.com/RWeb3man/status/2120422275610796537' },
+      { img: 'assets/community-art/_cryptonian_01-2120432012506919061.jpg', handle: '_Cryptonian_01', tweet: 'https://x.com/_Cryptonian_01/status/2120432012506919061' },
+      { img: 'assets/community-art/kipverse-2120460157054341560.jpg', handle: 'Kipverse', tweet: 'https://x.com/Kipverse/status/2120460157054341560' },
+      { img: 'assets/community-art/desiernareborn-2120473724763939268.jpg', handle: 'DesiErnaReborn', tweet: 'https://x.com/DesiErnaReborn/status/2120473724763939268' },
+      { img: 'assets/community-art/hiudayrly-2120479682214691021.jpg', handle: 'hiudayrly', tweet: 'https://x.com/hiudayrly/status/2120479682214691021' },
+      { img: 'assets/community-art/rolandta_-2120588365070573863.jpg', handle: 'RolandTA_', tweet: 'https://x.com/RolandTA_/status/2120588365070573863' },
+      { img: 'assets/community-art/rolandta_-2120531770525282452.jpg', handle: 'RolandTA_', tweet: 'https://x.com/RolandTA_/status/2120531770525282452' },
+      { img: 'assets/community-art/rolandta_-2120451163518837189.jpg', handle: 'RolandTA_', tweet: 'https://x.com/RolandTA_/status/2120451163518837189' },
+      { img: 'assets/community-art/catalyst_sync-2120485623018500531.jpg', handle: 'Catalyst_sync', tweet: 'https://x.com/Catalyst_sync/status/2120485623018500531' },
+      { img: 'assets/community-art/dinosoul_twt-2120489100520427749.jpg', handle: 'DinoSoul_twt', tweet: 'https://x.com/DinoSoul_twt/status/2120489100520427749' },
+      { img: 'assets/community-art/sinister1790-2120583706230612189.jpg', handle: 'sinister1790', tweet: 'https://x.com/sinister1790/status/2120583706230612189' },
+      { img: 'assets/community-art/vivianhola71-2120391483102802361.jpg', handle: 'vivianhola71', tweet: 'https://x.com/vivianhola71/status/2120391483102802361' },
+      { img: 'assets/community-art/noxcore_chain-2120446576782873011.jpg', handle: 'NoxCore_Chain', tweet: 'https://x.com/NoxCore_Chain/status/2120446576782873011' },
+      { img: 'assets/community-art/cnabunta-2120487192980033571.jpg', handle: 'CNabunta', tweet: 'https://x.com/CNabunta/status/2120487192980033571' },
+      { img: 'assets/community-art/lish_madethis-2120531220773601743.jpg', handle: 'lish_madethis', tweet: 'https://x.com/lish_madethis/status/2120531220773601743' },
+      { img: 'assets/community-art/carol_sand45854-2120559388180296059.jpg', handle: 'carol_sand45854', tweet: 'https://x.com/carol_sand45854/status/2120559388180296059' },
+      { img: 'assets/community-art/assihsuhg1-2120105865839862203.jpg', handle: 'assihsuhg1', tweet: 'https://x.com/assihsuhg1/status/2120105865839862203' },
+      { img: 'assets/community-art/hiudayrly-2120113252784869733.jpg', handle: 'hiudayrly', tweet: 'https://x.com/hiudayrly/status/2120113252784869733' },
+      { img: 'assets/community-art/cheetosss08-2120138532044112373.jpg', handle: 'cheetosss08', tweet: 'https://x.com/cheetosss08/status/2120138532044112373' },
+      { img: 'assets/community-art/ahmadfarouq284-2120178829507629315.jpg', handle: 'AhmadFarouq284', tweet: 'https://x.com/AhmadFarouq284/status/2120178829507629315' },
+      { img: 'assets/community-art/man_evm-2120231810672284081.jpg', handle: 'Man_evm', tweet: 'https://x.com/Man_evm/status/2120231810672284081' },
+      { img: 'assets/community-art/alexavictore60-2120428380835234220.jpg', handle: 'AlexaVictore60', tweet: 'https://x.com/AlexaVictore60/status/2120428380835234220' },
+      { img: 'assets/community-art/adam_chester23-2120451593145639296.jpg', handle: 'Adam_Chester23', tweet: 'https://x.com/Adam_Chester23/status/2120451593145639296' },
+      { img: 'assets/community-art/manifest_artt-2120509395985420506.jpg', handle: 'Manifest_Artt', tweet: 'https://x.com/Manifest_Artt/status/2120509395985420506' },
+      { img: 'assets/community-art/0xgeorgeweb3-2120584870086803754.jpg', handle: '0xGeorgeWeb3', tweet: 'https://x.com/0xGeorgeWeb3/status/2120584870086803754' },
+      { img: 'assets/community-art/sapnacb-2120360706122068398.jpg', handle: 'sapnacb', tweet: 'https://x.com/sapnacb/status/2120360706122068398' },
+      { img: 'assets/community-art/manifest_artt-2120462136006644080.jpg', handle: 'Manifest_Artt', tweet: 'https://x.com/Manifest_Artt/status/2120462136006644080' },
+      { img: 'assets/community-art/erinabase_-2120468118397137000.jpg', handle: 'ErinaBASE_', tweet: 'https://x.com/ErinaBASE_/status/2120468118397137000' },
+      { img: 'assets/community-art/erewinday-2120111546256994384.jpg', handle: 'erewinday', tweet: 'https://x.com/erewinday/status/2120111546256994384' },
+      { img: 'assets/community-art/0xsiam_-2120116518352781589.jpg', handle: '0xsiam_', tweet: 'https://x.com/0xsiam_/status/2120116518352781589' },
+      { img: 'assets/community-art/onlyone_king__-2120123490661523495.jpg', handle: 'Onlyone_King__', tweet: 'https://x.com/Onlyone_King__/status/2120123490661523495' },
+      { img: 'assets/community-art/edwrdtzy-2120502889550647390.jpg', handle: 'edwrdtzy', tweet: 'https://x.com/edwrdtzy/status/2120502889550647390' },
+      { img: 'assets/community-art/edwrdtzy-2120552180042404003.jpg', handle: 'edwrdtzy', tweet: 'https://x.com/edwrdtzy/status/2120552180042404003' },
+      { img: 'assets/community-art/aan_ardiansahh-2120423159526781221.jpg', handle: 'aan_ardiansahh', tweet: 'https://x.com/aan_ardiansahh/status/2120423159526781221' },
+      { img: 'assets/community-art/airdrobe1-2120557599494168980.jpg', handle: 'Airdrobe1', tweet: 'https://x.com/Airdrobe1/status/2120557599494168980' },
+      { img: 'assets/community-art/rektarc-2120558500506145097.jpg', handle: 'RektArc', tweet: 'https://x.com/RektArc/status/2120558500506145097' },
+      { img: 'assets/community-art/kairos98htl-2120564561044787347.jpg', handle: 'kairos98htl', tweet: 'https://x.com/kairos98htl/status/2120564561044787347' },
+      { img: 'assets/community-art/dili369_-2120592835510702571.jpg', handle: 'dili369_', tweet: 'https://x.com/dili369_/status/2120592835510702571' },
+      { img: 'assets/community-art/goneqn-2120184703638765774.jpg', handle: 'Goneqn', tweet: 'https://x.com/Goneqn/status/2120184703638765774' },
+      { img: 'assets/community-art/tonymeme_-2120245725980155977.jpg', handle: 'Tonymeme_', tweet: 'https://x.com/Tonymeme_/status/2120245725980155977' },
+      { img: 'assets/community-art/viseweb3-2120391849542348843.jpg', handle: 'viseweb3', tweet: 'https://x.com/viseweb3/status/2120391849542348843' },
+      { img: 'assets/community-art/bossi_peter-2120428946739143152.jpg', handle: 'Bossi_peter', tweet: 'https://x.com/Bossi_peter/status/2120428946739143152' },
+      { img: 'assets/community-art/beavisevan-2120459203026563573.jpg', handle: 'BeavisEvan', tweet: 'https://x.com/BeavisEvan/status/2120459203026563573' },
+      { img: 'assets/community-art/his_innocent_-2120463627706933354.jpg', handle: 'His_Innocent_', tweet: 'https://x.com/His_Innocent_/status/2120463627706933354' },
+      { img: 'assets/community-art/0xsilverquen-2120506732069982220.jpg', handle: '0xsilverquen', tweet: 'https://x.com/0xsilverquen/status/2120506732069982220' },
+      { img: 'assets/community-art/kairos98htl-2120577198864338965.jpg', handle: 'kairos98htl', tweet: 'https://x.com/kairos98htl/status/2120577198864338965' },
+      { img: 'assets/community-art/husnulhamid1-2120581062095196496.jpg', handle: 'husnulhamid1', tweet: 'https://x.com/husnulhamid1/status/2120581062095196496' },
+      { img: 'assets/community-art/khris_tinnah-2120582968175419533.jpg', handle: 'Khris_tinnah', tweet: 'https://x.com/Khris_tinnah/status/2120582968175419533' },
+      { img: 'assets/community-art/kairos98htl-2120583681328967967.jpg', handle: 'kairos98htl', tweet: 'https://x.com/kairos98htl/status/2120583681328967967' },
+      { img: 'assets/community-art/armyice7-2120272900762865801.jpg', handle: 'ARMYICE7', tweet: 'https://x.com/ARMYICE7/status/2120272900762865801' },
+      { img: 'assets/community-art/ajuhaban-2120361279860941280.jpg', handle: 'ajuhaban', tweet: 'https://x.com/ajuhaban/status/2120361279860941280' },
+      { img: 'assets/community-art/thee1of1-2120365112779317498.jpg', handle: 'thee1of1', tweet: 'https://x.com/thee1of1/status/2120365112779317498' },
+      { img: 'assets/community-art/webseneca-2120163545312620624.jpg', handle: 'WebSeneca', tweet: 'https://x.com/WebSeneca/status/2120163545312620624' },
+      { img: 'assets/community-art/aapengu-2120123911727620606.jpg', handle: 'AApengu', tweet: 'https://x.com/AApengu/status/2120123911727620606' },
+      { img: 'assets/community-art/manifest_artt-2120431724236587465.jpg', handle: 'Manifest_Artt', tweet: 'https://x.com/Manifest_Artt/status/2120431724236587465' },
+      { img: 'assets/community-art/rolandta_-2120201337317003478.jpg', handle: 'RolandTA_', tweet: 'https://x.com/RolandTA_/status/2120201337317003478' },
+      { img: 'assets/community-art/manifest_artt-2120303376382533800.jpg', handle: 'Manifest_Artt', tweet: 'https://x.com/Manifest_Artt/status/2120303376382533800' },
+      { img: 'assets/community-art/justlaxxxy-2120221702869422364.jpg', handle: 'JustLaxxxy', tweet: 'https://x.com/JustLaxxxy/status/2120221702869422364' },
+      { img: 'assets/community-art/edwrdtzy-2120353415381520659.jpg', handle: 'edwrdtzy', tweet: 'https://x.com/edwrdtzy/status/2120353415381520659' },
+      { img: 'assets/community-art/mahmuds241-2120567876180652450.jpg', handle: 'mahmuds241', tweet: 'https://x.com/mahmuds241/status/2120567876180652450' },
+      { img: 'assets/community-art/web3charlee-2120275824674746707.jpg', handle: 'web3charlee', tweet: 'https://x.com/web3charlee/status/2120275824674746707' },
+      { img: 'assets/community-art/spotlex100-2120539283593343228.jpg', handle: 'SpotLex100', tweet: 'https://x.com/SpotLex100/status/2120539283593343228' },
+      { img: 'assets/community-art/grannyth-2120546964966117571.jpg', handle: 'GrannyTh', tweet: 'https://x.com/GrannyTh/status/2120546964966117571' },
+      { img: 'assets/community-art/denmhd-2120212936249762006.jpg', handle: 'denmhd', tweet: 'https://x.com/denmhd/status/2120212936249762006' },
+      { img: 'assets/community-art/geraldvisuals-2120450205585715417.jpg', handle: 'GeraldVisuals', tweet: 'https://x.com/GeraldVisuals/status/2120450205585715417' },
+      { img: 'assets/community-art/leo_bobber-2120474434637295793.jpg', handle: 'Leo_Bobber', tweet: 'https://x.com/Leo_Bobber/status/2120474434637295793' },
+      { img: 'assets/community-art/arslan_onchain-2120534487150858332.jpg', handle: 'Arslan_onchain', tweet: 'https://x.com/Arslan_onchain/status/2120534487150858332' }
+    ];
+
+    var grid = document.getElementById('art-grid');
+    var countEl = document.getElementById('art-count');
+    countEl.textContent = ART.length + (ART.length === 1 ? ' entry' : ' entries');
+
+    ART.forEach(function (item) {
+      var link = document.createElement('a');
+      link.className = 'art-thumb';
+      link.href = item.tweet;
+      link.target = '_blank';
+      link.rel = 'noopener';
+      link.setAttribute('aria-label', 'View art by @' + item.handle + ' on X');
+
+      var img = document.createElement('img');
+      img.src = item.img;
+      img.alt = 'Community art by @' + item.handle;
+      img.loading = 'lazy';
+
+      var handle = document.createElement('span');
+      handle.className = 'art-thumb-handle';
+      handle.textContent = '@' + item.handle;
+
+      link.appendChild(img);
+      link.appendChild(handle);
+      grid.appendChild(link);
+    });
+  </script>
+</body>
+</html>
