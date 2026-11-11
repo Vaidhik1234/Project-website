@@ -169,6 +169,7 @@
       img.src = item.img;
       img.alt = 'Community art by @' + item.handle;
       img.loading = 'lazy';
+      img.decoding = 'async';
 
       var handle = document.createElement('span');
       handle.className = 'art-thumb-handle';
