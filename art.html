@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Titan+One&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=3">
+  <link rel="stylesheet" href="styles.css?v=4">
 </head>
 <body class="apply-body">
 
@@ -26,6 +26,9 @@
         <a href="index.html#faq" class="nav-link">F.A.Q.</a>
       </nav>
       <a href="index.html" class="btn btn-primary btn-sm nav-cta">Back Home</a>
+      <button type="button" class="nav-toggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
 
@@ -69,6 +72,16 @@
   </footer>
 
   <script>
+    var navToggle = document.querySelector('.nav-toggle');
+    var navLinks = document.querySelector('.nav-links');
+    navToggle.addEventListener('click', function () {
+      var open = navLinks.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', open);
+    });
+    navLinks.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () { navLinks.classList.remove('open'); });
+    });
+
     /* ============================================================
        COMMUNITY ART ENTRIES
        Har entry: { img: 'assets/community-art/<file>', handle: '<artist X handle>', tweet: '<tweet url>' }
